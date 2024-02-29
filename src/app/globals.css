@@ -1,0 +1,84 @@
+/* Reset margins and paddings for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: flex-start; /* Align items to the start */
+  background-color: #007bff; /* Header background color */
+  color: white;
+  padding: 10px 20px; /* Padding around the header */
+  height: 60px; /* Example height; adjust based on your actual header height */
+}
+
+.header h1 {
+  margin: 0;
+  color: #FFD700; /* Yellow text for readability */
+}
+
+nav {
+  flex-grow: 1; /* Allows the nav element to take up remaining space */
+  display: flex; /* Display nav items in a row */
+  justify-content: flex-end; /* Align nav items to the right */
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Aligns items without extra space */
+  background-color: #333; /* Darker grey for the nav bar */
+}
+
+nav ul li {
+  margin-left: 20px; /* Spacing between nav items */
+}
+
+nav ul li a {
+  color: #FFD700; /* Yellow text for readability */
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #FFD700; /* Hover effect */
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-top: 20px; /* Adjust based on actual space needed */
+  /* Calculate the min-height to ensure footer is positioned correctly */
+  /* This calculation assumes you know the footer's height */
+  min-height: calc(100vh - 60px - 20px - 60px); /* Adjust 60px to your footer's actual height, 20px is the margin-top */
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional */
+}
+
+.footer {
+  height: 60px; /* Adjust based on your actual footer height */
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+a {
+  color: #007bff;
+}
+
+a:hover {
+  color: #333;
+}
